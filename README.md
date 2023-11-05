@@ -10,9 +10,9 @@ Cada participante deverá entregar um algoritmo, sinalizando para qual problema 
 
 ## Regras
 
-Para essa competição é importante ressaltar que não é permitido o uso de "solvers". Aqui, definimos um "solver" como todo programa de computador que execute os métodos necessários para resolução do problema com pouca ou nenhuma intereferência do participante.
+Para essa competição é importante ressaltar que não é permitido o uso de *solvers*.  Um *solver* é um programa de computador que, quando aplicado a um problema, é capaz de encontrar a solução automaticamente, sem intervenção direta ou ajuste significativo por parte do usuário. Geralmente, o objetivo de um solver é encontrar a melhor solução ou uma solução aproximada para o problema, tornando-o um mecanismo automatizado de resolução. Na Rinha de Algoritmos, um solver é proibido para incentivar a resolução manual e criativa dos problemas.
 
-Em outras palavras, a parte principal do problema deverá ser resolvida pelo seu próprio algoritmo, isto é, um algoritmo escrito por você. Para exemplificar, suponhamos que um dos problemas consista em calcular um caminho mínimo entre dois pontos. O uso de uma biblioteca que forneça uma função que execute o método (e.g. algoritmo de Dijkstra ou algoritmo de Bellman-Ford) para obtenção do resultado não é permitido.
+Seja $x$ o valor da função objetivo retornado pelo algoritmo, $x_{opt}$ o valor objetivo da solução ótima e $y$ o tempo necessário para a obtenção da solução. A pontuação será determinada pela saída da função $f_{pontuação}(x) = f_{tempo}(y) + f_{aprox}(x)$, em que $f_{tempo}(y) = C_1y$ penaliza longos tempos computacionais e $f_{aprox}(x) = |x_{opt} - x| \times C_2$ penaliza soluções de baixa qualidade, ou seja, soluções cujo valor objetivo está significativamente distante do ótimo.
 
 ## Problemas
 

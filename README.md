@@ -12,7 +12,7 @@ Cada participante deverá entregar um algoritmo, sinalizando para qual problema 
 
 Para essa competição é importante ressaltar que não é permitido o uso de *solvers*.  Um *solver* é um programa de computador que, quando aplicado a um problema, é capaz de encontrar a solução automaticamente, sem intervenção direta ou ajuste significativo por parte do usuário. Geralmente, o objetivo de um solver é encontrar a melhor solução ou uma solução aproximada para o problema, tornando-o um mecanismo automatizado de resolução. Na Rinha de Algoritmos, um solver é proibido para incentivar a resolução manual e criativa dos problemas.
 
-Seja $x$ o valor da função objetivo retornado pelo algoritmo, $x_{opt}$ o valor objetivo da solução ótima e $y$ o tempo necessário para a obtenção da solução. A pontuação será determinada pela saída da função $f_{pontuação}(x) = f_{tempo}(y) + f_{aprox}(x)$, em que $f_{tempo}(y) = C_1 \times y$ penaliza longos tempos computacionais e $f_{aprox}(x) = |x_{opt} - x| \times C_2$ penaliza soluções de baixa qualidade, ou seja, soluções cujo valor objetivo está significativamente distante do ótimo.
+Seja $x$ o valor da função objetivo retornado pelo algoritmo, $x_{opt}$ o valor objetivo da solução ótima e $y$ o tempo necessário para a obtenção da solução. A pontuação será determinada pela saída da função $f_{pontuação}(x) = f_{tempo}(y) + f_{aprox}(x)$, em que $f_{tempo}(y) = C_1 \times y$ penaliza longos tempos computacionais e $f_{aprox}(x) = |x_{opt} - x| \times C_2$ penaliza soluções de baixa qualidade, ou seja, soluções cujo valor objetivo está significativamente distante do ótimo. As constantes $C_1$ e $C_2$ serão definidas para cada problema.
 
 ## Problemas
 
@@ -21,6 +21,8 @@ Seja $x$ o valor da função objetivo retornado pelo algoritmo, $x_{opt}$ o valo
 **Descrição:** Em uma agência de inteligência global, a alocação de agentes altamente treinados para missões secretas é uma tarefa crítica. Cada missão é única e envolve uma complexa rede de informações, espionagem e contrainteligência. Os agentes possuem diferentes especializações e níveis de habilidade.
 
 Nós queremos alocar os agentes de forma estratégica para essas missões, levando em consideração suas habilidades, e as características de cada missão. O objetivo é maximizar a eficiência global da agência, sendo essa dada como a soma do nível de segurança e confidencialidade. No máximo um agente pode ser alocado por missão.
+
+Para esse problema definimos $C_1 = 10$ e $C_2 = 700$.
 
 ### Problema 02: Cobertura de Eventos Esportivos
 

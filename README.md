@@ -18,9 +18,9 @@ Seja $x$ o valor da função objetivo retornado pelo algoritmo, $x_{opt}$ o valo
 
 ### Problema 01: Alocação Estratégica de Espiões
 
-**Descrição:** Em uma agência de inteligência global, a alocação de agentes altamente treinados para missões secretas é uma tarefa crítica. Cada missão é única e envolve uma complexa rede de informações, espionagem e contrainteligência. Os agentes possuem diferentes especializações e níveis de habilidade, e as missões variam em termos de risco, prioridade e importância estratégica.
+**Descrição:** Em uma agência de inteligência global, a alocação de agentes altamente treinados para missões secretas é uma tarefa crítica. Cada missão é única e envolve uma complexa rede de informações, espionagem e contrainteligência. Os agentes possuem diferentes especializações e níveis de habilidade.
 
-Nós queremos alocar os agentes de forma estratégica para essas missões, levando em consideração suas habilidades, as características de cada missão e as restrições de recursos da agência. O objetivo é maximizar a eficiência global da agência enquanto se mantém a segurança e a confidencialidade. No máximo um agente pode ser alocado por missão.
+Nós queremos alocar os agentes de forma estratégica para essas missões, levando em consideração suas habilidades, e as características de cada missão. O objetivo é maximizar a eficiência global da agência, sendo essa dada como a soma do nível de segurança e confidencialidade. No máximo um agente pode ser alocado por missão.
 
 ### Problema 02: Cobertura de Eventos Esportivos
 

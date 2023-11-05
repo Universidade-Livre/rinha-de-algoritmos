@@ -22,7 +22,7 @@ Seja $x$ o valor da função objetivo retornado pelo algoritmo, $x_{opt}$ o valo
 
 Nós queremos alocar os agentes de forma estratégica para essas missões, levando em consideração suas habilidades, e as características de cada missão. O objetivo é maximizar a eficiência global da agência, sendo essa dada como a soma do nível de segurança e confidencialidade. No máximo um agente pode ser alocado por missão.
 
-Para esse problema definimos $C_1 = 10$ e $C_2 = 700$.
+Para esse problema, definimos $C_1 = 10$ e $C_2 = 700$.
 
 ### Problema 02: Cobertura de Eventos Esportivos
 

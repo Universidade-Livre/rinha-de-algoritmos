@@ -40,9 +40,21 @@ O desafio é encontrar um conjunto mínimo de módulos a serem removidos para el
 
 ### Resultados do Problema 01:
 
+| Posição | Participante | $f_{pontuação}$ | $f_{tempo}$ | $f_{aprox}$ | Instâncias resolvidas 
+| ---------- | ---------- | ------- | ------- | ------- | ------- |
+| | | | | | |
+
 ### Resultados do Problema 02:
 
+| Posição | Participante | $f_{pontuação}$ | $f_{tempo}$ | $f_{aprox}$ | Instâncias resolvidas 
+| ---------- | ---------- | ------- | ------- | ------- | ------- |
+| | | | | | |
+
 ### Resultados do Problema 03:
+
+| Posição | Participante | $f_{pontuação}$ | $f_{tempo}$ | $f_{aprox}$ | Instâncias resolvidas 
+| ---------- | ---------- | ------- | ------- | ------- | ------- |
+| | | | | | |
 
 
 ## Premiação

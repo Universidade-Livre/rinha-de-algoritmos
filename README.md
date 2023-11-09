@@ -1,5 +1,16 @@
 # Rinha de Algoritmos
 
+![Learn4Elixir](./resources/img/header.png)
+
+<p align="center">
+  <a href="https://discord.gg/eXUBTY6HAu">
+      <img src="https://img.shields.io/discord/866378348368625704.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2" alt="Discord">
+  </a>
+  <a href="https://github.com/Universidade-Livre/rinha-de-algoritmos/star">
+      <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/Universidade-Livre/rinha-de-algoritmos?logo=apache%20spark&logoColor=gray&labelColor=E6E600&color=D8D800">
+  </a>
+</p>
+
 ## O que é?
 
 A rinha de algoritmos é uma competição amistosa baseada em competições similares, como a [Rinha de Compiladores](https://github.com/aripiprazole/rinha-de-compiler), [Rinha de Frontend](https://github.com/codante-io/rinha-frontend), e [Rinha de Backend](https://github.com/zanfranceschi/rinha-de-backend-2023-q3). O projeto possui como objetivo avaliar a capacidade dos participantes no design de algoritmos e estruturas de dados para resolver problemas práticos.

@@ -6,7 +6,7 @@
   <a href="https://discord.gg/eXUBTY6HAu">
       <img src="https://img.shields.io/discord/866378348368625704.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2" alt="Discord">
   </a>
-  <a href="https://github.com/Universidade-Livre/rinha-de-algoritmos/star">
+  <a href="https://github.com/Universidade-Livre/rinha-de-algoritmos/stargazers">
       <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/Universidade-Livre/rinha-de-algoritmos?logo=apache%20spark&logoColor=gray&labelColor=E6E600&color=D8D800">
   </a>
 </p>

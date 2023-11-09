@@ -1,5 +1,3 @@
-# Rinha de Algoritmos
-
 ![Learn4Elixir](./resources/img/header.png)
 
 <p align="center">
@@ -10,6 +8,10 @@
       <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/Universidade-Livre/rinha-de-algoritmos?logo=apache%20spark&logoColor=gray&labelColor=E6E600&color=D8D800">
   </a>
 </p>
+
+<hr>
+
+> Você está prestes a entrar na Rinha de Algoritmos, uma competição incrível que desafia você a mostrar o seu talento no mundo dos algoritmos e estruturas de dados. Nesta aventura, você vai enfrentar problemas reais que exigem soluções criativas e eficientes. Você vai se surpreender com casos curiosos, onde a sua habilidade em resolver desafios computacionais fará toda a diferença. Prepare-se para se divertir em um ambiente estimulante, onde o seu domínio algorítmico será testado. Venha para a Rinha de Algoritmos e embarque nessa jornada desafiadora!
 
 ## O que é?
 

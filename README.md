@@ -19,7 +19,7 @@ A rinha de algoritmos é uma competição amistosa baseada em competições simi
 
 Para avaliar os participantes, a descrição de algum caso prático será proposta. Caberá aos participantes identificar o problema e propor a melhor solução para resolvê-lo. Seguindo o mesmo modelo de maratonas de programação, serão fornecidas uma lista de entradas e de resultados esperados, em formato de texto, que poderão ser utilizados para guiar a criação do algoritmo. A pontuação e o ranking correspondente serão baseados em instâncias privadas. Estas serão liberadas apenas ao final da competição.
 
-Cada participante deverá entregar um algoritmo, sinalizando para qual problema aquele algoritmo foi criado, podendo utilizar apenas 1 unidade de CPU e 2GB de memória. Para mais detalhes sobre as submissões, veja [Como submeter um algoritmo](#).
+Cada participante deverá entregar um algoritmo, sinalizando para qual problema aquele algoritmo foi criado, podendo utilizar apenas 2 unidades de CPU e 2GB de memória. Para mais detalhes sobre as submissões, veja [Como submeter um algoritmo](#).
 
 ## Regras
 

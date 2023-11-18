@@ -18,11 +18,11 @@ As instâncias estão organizadas da seguinte maneira.
 
 - A linha $n_{1} + 2 \leq i \leq n_{1} + n_{2} + 1$ contêm informações sobre a missão $i$. Essas linhas estão estruturadas de forma semelhante aos agentes, contendo a avaliação mínima necessária para um agente ser alocado a essa missão e uma lista de habilidades necessárias, separadas por espaço, nesta ordem.
 
-- A linha $n_{1} + n_{2} + 2 \leq i \leq 2n_{1} + n_{2} + 1$ contêm informações sobre o quão eficiente é alocar o agente $i$ para cada missão, se possível. Assim como nos casos anteriores, os valores são dividos por espaços. O $j$-ésimo valor da lista corresponde ao custo de alocar o agente $i$ à missão $j$.
+- A linha $n_{1} + n_{2} + 2 \leq i \leq 2n_{1} + n_{2} + 1$ contêm informações sobre o custo de alocar o agente $i$ para cada missão, se for possível. Assim como nos casos anteriores, os valores são dividos por espaços. O $j$-ésimo valor da lista corresponde ao custo de alocar o agente $i$ à missão $j$.
 
 **Objetivo:** 
 
-- Realize uma alocação de agentes que maximize a eficiência.
+- Realize uma alocação de agentes que minimize o custo.
 
 **Restrições:** 
 

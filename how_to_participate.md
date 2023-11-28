@@ -14,7 +14,7 @@ As instâncias estão organizadas da seguinte maneira.
 
 - A primeira linha contêm a quantidade $n_{1}$ de agentes e a quantidade $n_{2}$ de missões, respectivamente.
 
-- Cada linha $2 \leq i \leq n_{1} + 1$ corresponde às informações de do agente $i$. As informações, separadas por espaços, informam a avaliação do agente e uma lista de habilidades que o agente possui, nesta ordem.
+- Cada linha $2 \leq i \leq n_{1} + 1$ corresponde às informações do agente $i$. As informações, separadas por espaços, informam a avaliação do agente e uma lista de habilidades que o agente possui, nesta ordem.
 
 - A linha $n_{1} + 2 \leq i \leq n_{1} + n_{2} + 1$ contêm informações sobre a missão $i$. Essas linhas estão estruturadas de forma semelhante aos agentes, contendo a avaliação mínima necessária para um agente ser alocado a essa missão e uma lista de habilidades necessárias, separadas por espaço, nesta ordem.
 

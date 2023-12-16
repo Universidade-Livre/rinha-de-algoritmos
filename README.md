@@ -43,7 +43,7 @@ Cada participante deverá entregar um algoritmo, sinalizando para qual problema 
 
 Uma função $f: \mathbb{R}^2 \rightarrow \mathbb{R}$ determinará a pontuação dos participantes. Antes de descrevê-la, denotaremos por $\mathbf{x} = [x_1 \; x_2]^T$ o vetor de saída do algoritmo, onde $x_1$ é o tempo, em segundos, para obtenção da solução, e $x_2$ é o valor da **solução viável**¹ encontrada.
 
-A pontuação é dada por $f(\mathbf{x}) = C_{1} \times x_{1} + C_{2} \times |x^{*} - x_{2}|$, onde $x^*$ é o valor da solução ótima. As constantes $C_1$ e $C_2$ serão definidas para cada problema, e servem para penalizar o tempo de execução e o quão distante a solução viável está do ótimo, respectivamente.
+A pontuação é dada por $f(\mathbf{x}) = C_{1} \times x_{1} + C_{2} \times |x^{\star} - x_{2}|$, onde $x^{\star}$ é o valor da solução ótima. As constantes $C_1$ e $C_2$ serão definidas para cada problema, e servem para penalizar o tempo de execução e o quão distante a solução viável está do ótimo, respectivamente.
 
 ---
 

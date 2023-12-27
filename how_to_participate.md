@@ -4,35 +4,43 @@ Nesta seção descreveremos os procedimentos para participação na Rinha de Alg
 
 ## Instâncias
 
-Para cada problema fornecemos 3 instâncias relativamente pequenas para realizar os testes dos algoritmos. As instâncias referentes ao problema $1 \leq i \leq 3$ encontram-se em `resources/instances/problem_0i`. Ainda, todas as pastas contêm um arquivo `results.txt` com as soluções ótimas das instâncias dadas, separadas por espaço.
+Para cada problema fornecemos 3 instâncias relativamente pequenas para realizar os testes dos algoritmos. As instâncias referentes ao problema $1 \leq i \leq 3$ encontram-se em `resources/instancias/exemplo_0i`. Ainda, todas as pastas contêm um arquivo `resultados.txt` com as soluções ótimas das instâncias dadas, separadas por espaço.
 
 Nas seções abaixo, descreveremos a estrutura dos arquivos de texto que compõem as instâncias e formalizaremos os objetivos e restrições.
 
-### Estrutura: Problema 01
+## Estrutura dos Problemas
+
+### Problema 01
+
+**Instâncias:**
 
 As instâncias estão organizadas da seguinte maneira.
 
-- A primeira linha contêm a quantidade $n_{1}$ de agentes e a quantidade $n_{2}$ de missões, respectivamente.
+- A primeira linha consiste de dois valores, a quantidade de sementes distintas e a quantidade de espaços disponíveis, respectivamente.
 
-- Cada linha $2 \leq i \leq n_{1} + 1$ corresponde às informações do agente $i$. As informações, separadas por espaços, informam a avaliação do agente e uma lista de habilidades que o agente possui, nesta ordem.
-
-- A linha $n_{1} + 2 \leq i \leq n_{1} + n_{2} + 1$ contêm informações sobre a missão $i$. Essas linhas estão estruturadas de forma semelhante aos agentes, contendo a avaliação mínima necessária para um agente ser alocado a essa missão e uma lista de habilidades necessárias, separadas por espaço, nesta ordem.
-
-- A linha $n_{1} + n_{2} + 2 \leq i \leq 2n_{1} + n_{2} + 1$ contêm informações sobre o custo de alocar o agente $i$ para cada missão, se for possível. Assim como nos casos anteriores, os valores são dividos por espaços. O $j$-ésimo valor da lista corresponde ao custo de alocar o agente $i$ à missão $j$.
+- As $n$ linhas seguintes, onde $n$ é a quantidade de sementes consistem de dois valores por linha, divididas por espaço. O primeiro é o espaço necessário para plantar a semente $i$, já o segundo corresponde ao ganho em moedas no final do periodo ao plantar esta semente.
 
 **Objetivo:** 
 
-- Realize uma alocação de agentes que minimize o custo.
+- Obtenha o lucro máximo possível.
 
-**Restrições:** 
+**Exemplo**
 
-- Um agente deve ser alocado a no máximo uma missão.
+Suponhamos que você receba as informações abaixo, e que possui apenas 2 blocos disponíveis pra plantio.
 
-- Uma missão pode ser assumida por no máximo um agente.
+| **Semente** | **Valor** | **Espaço** |
+|-------------|-----------|------------|
+| Café        | 150       | 1          |
+| Arroz       | 260       | 2          |
+| Cenoura     | 100       | 1          |
 
-### Estrutura: Problema 02
+Podemos ver facilmente que a solução ótima é dada pelo plantio de arroz apenas.
 
+---
 
+### Problema 02
 
-### Estrutura: Problema 03
+---
+
+### Problema 03
 

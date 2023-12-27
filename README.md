@@ -27,7 +27,7 @@ Cada participante deverá entregar um algoritmo, sinalizando para qual problema 
 
 - Para essa competição é importante ressaltar que **não** é permitido o uso de *solvers*².  
 
-- Caso sejam utilizados algoritmos probabilisticos³, o valor de solução a ser considerado será a média de $40$ iterações do algoritmo, ou o valor mais próximo possível dessa quantidade de iterações, a depender do tempo necessário para uma solução ser computada.
+- Caso sejam utilizados algoritmos de Monte Carlo³, o valor de solução a ser considerado será o melhor dentre $40$ iterações do algoritmo, ou o valor mais próximo possível dessa quantidade de iterações, a depender do tempo necessário para uma solução ser computada.
 
 ---
 
@@ -43,7 +43,9 @@ Cada participante deverá entregar um algoritmo, sinalizando para qual problema 
 
 Uma função $f: \mathbb{R}^2 \rightarrow \mathbb{R}$ determinará a pontuação dos participantes. Antes de descrevê-la, denotaremos por $\mathbf{x} = [x_1 \; x_2]^T$ o vetor de saída do algoritmo, onde $x_1$ é o tempo, em segundos, para obtenção da solução, e $x_2$ é o valor da **solução viável**¹ encontrada.
 
-A pontuação é dada por $f(\mathbf{x}) = C_{1} \times x_{1} + C_{2} \times |x^{\star} - x_{2}|$, onde $x^{\star}$ é o valor da solução ótima. As constantes $C_1$ e $C_2$ serão definidas para cada problema, e servem para penalizar o tempo de execução e o quão distante a solução viável está do ótimo, respectivamente.
+A pontuação é dada por $f(\mathbf{x}) = \min(100, \; C_{1} / x_{1}) + \min(100, \; C_{2} / |x^{\star} - x_{2}|)$, onde $x^{\star}$ é o valor da solução ótima. As constantes $C_1$ e $C_2$ serão definidas para cada problema, e servem para penalizar o tempo de execução e o quão distante a solução viável está do ótimo, respectivamente.
+
+Vale ressaltar que quanto maior for o valor de $f(\mathbf{x})$, melhor será a pontuação.
 
 ---
 
@@ -53,29 +55,25 @@ A pontuação é dada por $f(\mathbf{x}) = C_{1} \times x_{1} + C_{2} \times |x^
 
 ## Problemas
 
-### Problema 01: Alocação Estratégica de Espiões
+### Problema 01: Lucro de Plantação no Stardew Valley
 
-**Descrição:** Em uma agência de inteligência global, a alocação de agentes altamente treinados para missões secretas é uma tarefa crítica. Cada missão é única e envolve uma complexa rede de informações, espionagem e contrainteligência. Os agentes possuem diferentes especializações e níveis de habilidade.
+**Descrição:** Na busca por otimizar seus ganhos enquanto joga Stardew Valley, você analisa as opções de sementes disponíveis em determinado momento e registra a quantidade de espaços disponíveis para o plantio. 
 
-Nós queremos alocar os agentes de forma estratégica para essas missões, levando em consideração suas habilidades, nível, e as características de cada missão. Todo agente possui um custo de alocação associado a cada missão. O objetivo é minimizar o custo global da agência. No máximo um agente pode ser alocado por missão.
+Por ser um fazendeiro organizado, você já tem conhecimento sobre a quantia de moedas que pode obter ao plantar cada tipo de semente durante um período específico, bem como a quantidade de espaços necessários para cada uma delas. Seu objetivo é, portanto, maximizar seu lucro ao plantar o maior número possível de sementes, levando em consideração a capacidade de plantio disponível, ao final do período escolhido.
 
-Para esse problema, definimos $C_1 = 10$ e $C_2 = 700$.
-
----
-
-### Problema 02: Cobertura de Eventos Esportivos
-
-**Descrição:** Um canal de esportes deseja otimizar a cobertura de eventos esportivos transmitindo-os ao vivo em diferentes horários. Existem vários eventos esportivos ocorrendo simultaneamente em diferentes locais, como partidas de futebol, corridas de automóveis e competições de tênis. A emissora possui uma programação fixa ao longo do dia, com horários disponíveis para transmissão.
-
-O desafio é selecionar um conjunto mínimo de eventos esportivos para transmitir, de modo a cobrir o maior número possível de horários disponíveis, garantindo que nenhum horário fique vazio na programação. Cada evento tem um custo associado à transmissão, e o objetivo é minimizar o custo total da transmissão.
+Para esse problema, definiremos $C_{1} = 1$, $C_{2} = 0.2$, e uma pontuação bônus $C_{3} = 50$.
 
 ---
 
-### Problema 03: Correção de Dependências de Software
+### Problema 02: ???
 
-**Descrição:** Em sistemas de software, módulos frequentemente possuem dependências uns dos outros, representando relações de chamada de funções ou bibliotecas. Nesses sistemas, comumente desejamos identificar e eliminar o menor número de módulos para corrigir dependências cíclicas indesejadas, que podem causar problemas de integridade no sistema.
+**Descrição:** ???
 
-O desafio é encontrar um conjunto mínimo de módulos a serem removidos para eliminar todas as dependências cíclicas no software, minimizando o impacto nas funcionalidades globais do sistema.
+---
+
+### Problema 03: ???
+
+**Descrição:** ???
 
 ## Resultados
 
@@ -83,12 +81,14 @@ Nesta seção disponibilizaremos os resultados das submissões. Para cada instâ
 
 Incluiremos uma submissão secreta de um membro da moderação da UBL para fins de benchmarking inicial. Esta submissão **não** será considerada para fins de premiação.
 
+A pontuação será calculada a partir da média de $40$ iterações do algoritmo.
+
 ---
 ### Resultados do Problema 01:
 
 | Posição | Participante | Pontuação | Resolvidas 
 | ---------- | ---------- | ------- | ------- |
-| - | Secreto | x | y |
+| - | Secreto | 939.8 + 1000 | 20/20 |
 ---
 
 ### Resultados do Problema 02:

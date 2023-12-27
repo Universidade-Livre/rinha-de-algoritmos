@@ -1,0 +1,3 @@
+instances/21.txt	1194
+instances/22.txt	407
+instances/23.txt	1566

@@ -86,24 +86,24 @@ A pontuação será calculada a partir da média de $40$ iterações do algoritm
 ---
 ### Resultados do Problema 01:
 
-| Posição | Participante | Pontuação | Resolvidas 
-| ---------- | ---------- | ------- | ------- |
-| - | Secreto | 939.8 + 1000 | 20/20 |
+| Posição | Participante | Segundos | Resolvidas | Linguagem
+| ---------- | ---------- | ------- | ------- | ---------- |
+| - | Secreto | 939.8 + 1000 | 20/20 | Julia |
 ---
 
 ### Resultados do Problema 02:
 
-| Posição | Participante | Pontuação | Resolvidas 
-| ---------- | ---------- | ------- | ------- |
-| - | Secreto | x | y |
+| Posição | Participante | Pontuação | Resolvidas | Linguagem
+| ---------- | ---------- | ------- | ------- | ---------- |
+| - | Secreto | ? | ?/20 | ? |
 
 ---
 
 ### Resultados do Problema 03:
 
-| Posição | Participante | Pontuação | Resolvidas 
-| ---------- | ---------- | ------- | ------- |
-| - | Secreto | x | y | 
+| Posição | Participante | Pontuação | Resolvidas | Linguagem
+| ---------- | ---------- | ------- | ------- | ---------- |
+| - | Secreto | ? | ?/20 | ? |
 
 ---
 

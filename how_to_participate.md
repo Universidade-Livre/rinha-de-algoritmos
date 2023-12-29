@@ -34,12 +34,12 @@ As instâncias estão organizadas da seguinte maneira.
 
 **Limites:**
 
-Seja $n$ a quantidade de sementes, $v_{i}$ e $w_{i}$ o valor e a quantidade de espaços necesários para a semente $i$, e $W$ a quantidade de espaços disponíveis. O problema possui os seguintes limitantes.
+Seja $n$ a quantidade de sementes, $v_{i}$ e $w_{i}$ o valor e a quantidade de espaços necesários para a semente $i$, e $W$ a quantidade de espaços disponíveis. O problema possui os seguintes limitantes. Note que todos os valores são inteiros
 
 - $1 \leq n \leq 1000$
 - $30 \leq v_{i} \leq 200$
 - $1 \leq w_{i} \leq 7$
-- $1 \leq W \leq 8000 / 3$
+- $1 \leq W \leq 2666$
 
 Observe que você possui **apenas uma** unidade de cada semente!
 

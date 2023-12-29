@@ -8,7 +8,7 @@ Começar a Rinha de Algoritmos é mamão com açúcar, é só:
 
 1. No seu Terminal, clone esse repositório com o comando `git clone git@github.com:Universidade-Livre/rinha-de-algoritmos`.
 2. Crie uma ramificação (branch) no repositório clonado para a resolução do seu exercício com o comando `git checkout -b problema-1`.
-3. Na pasta submissions crie uma pasta com o seu nome de usuário. Ex: `mateusrovedaa/`
+3. Na pasta `submissions` crie uma pasta com o seu nome de usuário. Ex: `mateusrovedaa/`
 4. Resolva o problema com base nas instruções informadas na seção [Instâncias](#instâncias) e salve o código em um arquivo com o nome `problema-1.ext`, onde `ext` é a extensão da linguagem de programação. Além disso, crie um arquivo `README.md` colocando instruções e detalhes da implementação que achar necessário. Preferencialmente, faça com que o seu código receba o arquivo das instâncias como argumentos no CLI.
 5. Adicione as alterações feitas para serem enviadas com o comando `git add .`
 6. Faça o commit enviando essas alterações `git commit -m "Submissão do problema 01"`.

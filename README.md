@@ -63,6 +63,8 @@ Por ser um fazendeiro organizado, você já tem conhecimento sobre a quantia de 
 
 Para esse problema, definiremos $C_{1} = 1$, $C_{2} = 0.2$, e uma pontuação bônus $C_{3} = 50$.
 
+Confira os detalhes em [como participar](how_to_participate.md#problema-01).
+
 ---
 
 ### Problema 02: ???

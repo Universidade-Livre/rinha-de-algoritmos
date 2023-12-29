@@ -1,6 +1,18 @@
 # Como participar
 
-Nesta seção descreveremos os procedimentos para participação na Rinha de Algoritmos.
+Nesta seção descreveremos os procedimentos para participação e submissão na Rinha de Algoritmos.
+
+## Como submeter
+
+Começar a Rinha de Algoritmos é muito mamão com açúcar, é só:
+
+1. No seu Terminal, clone esse repositório com o comando `git clone git@github.com:Universidade-Livre/rinha-de-algoritmos`.
+2. Crie uma ramificação (branch) no repositório clonado para a resolução do seu exercício com o comando `git checkout -b problema-1`.
+3. Na pasta submissions crie uma pasta com o seu nome de usuário. Ex: `mateusrovedaa/`
+4. Resolva o problema com base nas instruções informadas na seção [Instâncias](#instâncias) e salve o código em um arquivo `.txt` com o nome `problema-1.txt`. Além disso, crie um arquivo `README.md` colocando instruções ou detalhes da implementação que achar necessário.
+5. Adicione as alterações feitas para serem enviadas com o comando `git add .`
+6. Faça o commit enviando essas alterações `git commit -m "Completado o Problema 1"`.
+7. Abra um PR para a ramificação main.
 
 ## Instâncias
 

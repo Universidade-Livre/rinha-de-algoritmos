@@ -21,6 +21,8 @@ Para avaliar os participantes, a descrição de algum caso prático será propos
 
 Cada participante deverá entregar um algoritmo, sinalizando para qual problema aquele algoritmo foi criado, podendo utilizar apenas 2 unidades de CPU e 2GB de memória. Para mais detalhes sobre as submissões, veja [como submeter um algoritmo](how_to_participate.md).
 
+Caso hajam dúvidas, por favor abram uma *issue* ou utilizem o nosso servidor do Discord!
+
 ## Regras
 
 - Embora estaremos sempre incentivando a conversa e colaboração entre os participantes em prol do estabelecimento de um ambiente de aprendizado, não será permitido compartilhar as soluções nos canais de comunicação da UBL¹;

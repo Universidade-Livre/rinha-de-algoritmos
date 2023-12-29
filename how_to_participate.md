@@ -16,7 +16,7 @@ Começar a Rinha de Algoritmos é mamão com açúcar, é só:
 
 ## Instâncias
 
-Para cada problema fornecemos 3 instâncias relativamente pequenas para realizar os testes dos algoritmos. As instâncias referentes ao problema $1 \leq i \leq 3$ encontram-se em `resources/instancias/exemplo_0i`. Ainda, todas as pastas contêm um arquivo `resultados.txt` com as soluções ótimas das instâncias dadas, separadas por espaço.
+Para cada problema fornecemos 3 instâncias relativamente pequenas para realizar os experimentos iniciais. As instâncias referentes ao problema $1 \leq i \leq 3$ encontram-se em `resources/instancias/exemplo_0i`. Ainda, todas as pastas contêm um arquivo `resultados.txt` com as soluções ótimas das instâncias dadas, separadas por espaço.
 
 Nas seções abaixo, descreveremos a estrutura dos arquivos de texto que compõem as instâncias e formalizaremos os objetivos e restrições.
 
@@ -26,22 +26,20 @@ Nas seções abaixo, descreveremos a estrutura dos arquivos de texto que compõe
 
 **Instâncias:**
 
-As instâncias estão organizadas da seguinte maneira.
+Seja $n$ a quantidade de sementes, $v_{i}$ e $w_{i}$ o valor e a quantidade de espaços necesários para a semente $i$, e $W$ a quantidade de espaços disponíveis. O problema possui os seguintes limitantes. As instâncias estão organizadas da seguinte maneira.
 
 - A primeira linha consiste de dois valores, a quantidade de sementes distintas e a quantidade de espaços disponíveis, respectivamente.
 
-- As $n$ linhas seguintes, onde $n$ é a quantidade de sementes consistem de dois valores por linha, divididas por espaço. O primeiro é o espaço necessário para plantar a semente $i$, já o segundo corresponde ao ganho em moedas no final do periodo ao plantar esta semente.
+- As $n$ linhas seguintes, onde $n$ é a quantidade de tipos sementes, consistem de dois valores por linha, divididas por espaço. O primeiro é o espaço necessário $w_{i}$ para plantar a semente $i$, já o segundo corresponde ao ganho em moedas $v_{i}$ no final do periodo ao plantar esta semente.
+
+Para todos os tipos de semente, você possui apenas **UMA** unidade!
 
 **Limites:**
-
-Seja $n$ a quantidade de sementes, $v_{i}$ e $w_{i}$ o valor e a quantidade de espaços necesários para a semente $i$, e $W$ a quantidade de espaços disponíveis. O problema possui os seguintes limitantes. Note que todos os valores são inteiros
 
 - $1 \leq n \leq 1000$
 - $30 \leq v_{i} \leq 200$
 - $1 \leq w_{i} \leq 7$
 - $1 \leq W \leq 2666$
-
-Observe que você possui **apenas uma** unidade de cada semente!
 
 **Objetivo:** 
 
@@ -57,7 +55,7 @@ Suponhamos que você receba as informações abaixo, e que possui apenas 2 bloco
 | Arroz       | 260       | 2          |
 | Cenoura     | 100       | 1          |
 
-Podemos ver facilmente que a solução ótima é dada pelo plantio de arroz apenas.
+Podemos ver facilmente que a solução ótima é dada pelo plantio de arroz apenas. Perceba que o plantio de duas unidades de café, totalizando um lucro de 300, não é possível pela nossa suposição de haver apenas uma única unidade de cada tipo de semente.
 
 ---
 

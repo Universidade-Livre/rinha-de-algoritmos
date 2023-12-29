@@ -61,7 +61,7 @@ Vale ressaltar que quanto maior for o valor de $f(\mathbf{x})$, melhor será a p
 
 Por ser um fazendeiro organizado, você já tem conhecimento sobre a quantia de moedas que pode obter ao plantar cada tipo de semente durante um período específico, bem como a quantidade de espaços necessários para cada uma delas. Seu objetivo é, portanto, maximizar seu lucro ao plantar o maior número possível de sementes, levando em consideração a capacidade de plantio disponível, ao final do período escolhido.
 
-Para esse problema, definiremos $C_{1} = 1$, $C_{2} = 0.2$, e uma pontuação bônus $C_{3} = 50$.
+Para esse problema, definiremos $C_{1} = 1$, $C_{2} = 0.2$, e uma pontuação bônus por cada instância resolvida de $C_{3} = 50$.
 
 Confira os detalhes em [como participar](how_to_participate.md#problema-01).
 

@@ -88,7 +88,7 @@ A pontuação será calculada a partir da média de $40$ iterações do algoritm
 
 | Posição | Participante | Segundos | Resolvidas | Linguagem
 | ---------- | ---------- | ------- | ------- | ---------- |
-| - | Secreto | 939.8 + 1000 | 20/20 | Julia |
+| - | Secreto | ? | ?/20 | ? |
 ---
 
 ### Resultados do Problema 02:

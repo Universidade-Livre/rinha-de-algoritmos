@@ -1,7 +1,7 @@
+use std::env;
 use std::fs::File;
 use std::io::{self, BufRead};
 use std::path::Path;
-use std::time::Instant;
 
 fn knapsack(items: &[(usize, usize)], capacity: usize) -> usize {
     let mut dp = vec![0; capacity + 1];
@@ -16,8 +16,14 @@ fn knapsack(items: &[(usize, usize)], capacity: usize) -> usize {
 }
 
 fn main() -> io::Result<()> {
-    let start = Instant::now();
-    let path = Path::new("exemplo_03.txt");
+    let args: Vec<String> = env::args().collect();
+    if args.len() < 2 {
+        eprintln!("Usage: {} <filename>", args[0]);
+        std::process::exit(1);
+    }
+    let filename = &args[1];
+
+    let path = Path::new(filename);
     let file = File::open(&path)?;
 
     let lines: Vec<String> = io::BufReader::new(file).lines().filter_map(|line| line.ok()).collect();
@@ -34,10 +40,8 @@ fn main() -> io::Result<()> {
         .collect();
 
     let max_value = knapsack(&items, capacity);
-    let duration = start.elapsed();
 
     println!("Solution: {}", max_value);
-    println!("Time taken: {:?}", duration);
 
     Ok(())
 }

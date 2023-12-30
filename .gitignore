@@ -1,6 +1,5 @@
 *.jl
 *.cpp
 *.out
-*.js
 *.py
 *.c

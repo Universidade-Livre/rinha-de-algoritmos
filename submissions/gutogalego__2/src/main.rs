@@ -2,7 +2,6 @@ use std::env;
 use std::fs::File;
 use std::io::{self, BufRead};
 use std::path::Path;
-use std::time::Instant;
 
 fn main() -> io::Result<()> {
     let args: Vec<String> = env::args().collect();
@@ -12,7 +11,6 @@ fn main() -> io::Result<()> {
     }
     let filename = &args[1];
 
-    let start = Instant::now();
     let path = Path::new(filename);
     let file = File::open(&path)?;
 
@@ -45,10 +43,7 @@ fn main() -> io::Result<()> {
         }
     }
 
-    let duration = start.elapsed();
-
     println!("Solution: {}", max_value);
-    println!("Time taken: {:?}", duration);
 
     Ok(())
 }

@@ -1,0 +1,71 @@
+//RAW
+
+function maxCoinsX(seeds, W) {
+  const n = seeds.length;
+
+  // Inicializando a matriz para armazenar as soluções parciais
+  const mtz = new Array(n + 1).fill(0).map(() => new Array(W + 1).fill(0));
+
+  //console.log("mtz:", mtz);
+
+  // Preenchendo a matriz usando prog dinâmica
+  for (let i = 1; i <= n; i++) {
+    const wi = seeds[i - 1].spaceRequired;
+    const vi = seeds[i - 1].coins;
+
+    for (let j = 1; j <= W; j++) {
+      // Verificando se podemos incluir a semente i na plantação
+      if (wi <= j) {
+        // Se for possível incluir a semente i na plantação, então o valor máximo obtido é o máximo entre:
+        // 1) o valor máximo obtido sem incluir a semente i na plantação e
+        // 2) o valor máximo obtido incluindo a semente i na plantação
+        mtz[i][j] = Math.max(mtz[i - 1][j], mtz[i - 1][j - wi] + vi);
+      } else {
+        // Se não for possível incluir a semente i na plantação, então o valor máximo obtido é o mesmo da semente anterior
+        mtz[i][j] = mtz[i - 1][j];
+      }
+    }
+  }
+
+  // Reconstruindo a solução para determinar as sementes escolhidas
+  const selectedSeeds = [];
+  let ni = n;
+  let Wj = W;
+  while (ni > 0 && Wj > 0) {
+    if (mtz[ni][Wj] !== mtz[ni - 1][Wj]) {
+      selectedSeeds.push(seeds[ni - 1].seed);
+      Wj -= seeds[ni - 1].spaceRequired;
+    }
+    ni--;
+  }
+
+  // Retornando o valor máximo obtido e a ou as sementes escolhidas
+  return { maxValue: mtz[n][W], selectedSeeds };
+}
+
+
+// // EXEMPLO DE USO
+// // # Sementes disponíveis
+// const seeds = [
+//   { seed: "cafe", coins: 150, spaceRequired: 1 },
+//   { seed: "arroz", coins: 260, spaceRequired: 2 },
+//   { seed: "cenoura", coins: 100, spaceRequired: 1 },
+//   // { seed: 'batata', coins: 100,  spaceRequired: 2 },
+//   // { seed: 'feijão', coins: 160,  spaceRequired: 1 },
+// ];
+// // # Espaço disponível na plantação
+// const W = 2;
+
+// const result = maxCoins(seeds, W);
+
+// const seedLabel =
+//   result.selectedSeeds.length > 1 ? "Sementes escolhidas" : "Semente escolhida";
+
+// console.log(
+//   `${seedLabel}: ${result.selectedSeeds.join(", ")}. Valor máximo obtido: ${result.maxValue
+//   }`
+// );
+
+//SORT SOMENTE PARA FINS DE TESTE
+// Função para ordenar as sementes,
+// Exemplo:  ['11', '9', 'batata', '1', 'arroz'] = ['1', '9', '11', 'arroz', 'batata']

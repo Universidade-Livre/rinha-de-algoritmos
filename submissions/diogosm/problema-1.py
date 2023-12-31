@@ -4,6 +4,11 @@ import sys
 
 n, s = map(int, next(sys.stdin).strip().split())
 tuples = [tuple(map(int, next(sys.stdin).strip().split())) for _ in range(n)]
+
+## remove solucoes impossiveis
+tuples.sort(key=lambda x: x[1]/x[0], reverse=True)
+tuples = [tup for tup in tuples if tup[0] <= s]
+
 memoization = {}
 
 ## calc pd

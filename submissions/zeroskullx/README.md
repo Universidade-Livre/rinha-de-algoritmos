@@ -21,7 +21,7 @@ _Utilize -S para visualizar as sementes plantadas._
 
 "Programação Dinâmica é uma técnica de otimização que resolve problemas dividindo-os em subproblemas menores e resolvendo cada subproblema apenas uma vez."
 
-Inicie o processo criando uma matriz para armazenar as sementes válidas. Além disso, levei a análise um passo adiante ao incluir as sementes plantadas, junto com o valor gerado por elas. No entanto, antes de chegar a esses resultados, elaborei um array de sementes com base nos exemplos do arquivo de texto. Isso foi feito para proporcionar uma compreensão mais aprofundada do algoritmo que seria aplicado às sementes.
+Iniciei o processo criando uma matriz para armazenar as sementes válidas. Além disso, levei a análise um passo adiante ao incluir as sementes plantadas, junto com o valor gerado por elas. No entanto, antes de chegar a esses resultados, elaborei um array de sementes com base nos exemplos do arquivo de texto. Isso foi feito para proporcionar uma compreensão mais aprofundada do algoritmo que seria aplicado às sementes.
 
 ```typescript
 [

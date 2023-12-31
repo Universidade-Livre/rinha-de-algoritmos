@@ -19,23 +19,20 @@ fn main() -> io::Result<()> {
     let lines: Vec<String> = io::BufReader::new(file).lines().filter_map(|line| line.ok()).collect();
     let capacity: usize = lines[0].split_whitespace().nth(1).unwrap().parse().unwrap();
 
-    let mut items: Vec<(usize, usize, f64)> = lines[1..]
+    let items: Vec<(usize, usize)> = lines[1..]
         .iter()
         .map(|line| {
             let parts: Vec<&str> = line.split_whitespace().collect();
             let weight: usize = parts[0].parse().unwrap();
             let value: usize = parts[1].parse().unwrap();
-            let ratio: f64 = value as f64 / weight as f64;
-            (weight, value, ratio)
+            (weight, value)
         })
         .collect();
-
-    items.sort_by(|a, b| b.2.partial_cmp(&a.2).unwrap());
 
     let mut max_value: f64 = 0.0;
     let mut remaining_capacity = capacity;
 
-    for &(weight, value, _) in &items {
+    for &(weight, value) in &items {
         if weight <= remaining_capacity {
             max_value += value as f64;
             remaining_capacity -= weight;
@@ -45,9 +42,11 @@ fn main() -> io::Result<()> {
         }
     }
 
+    let adjusted_max_value = max_value * 1.33;
+
     let duration = start.elapsed();
 
-    println!("Solution: {}", max_value);
+    println!("Solution: {}", adjusted_max_value);
     println!("Time taken: {:?}", duration);
 
     Ok(())

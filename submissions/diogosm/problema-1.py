@@ -1,5 +1,6 @@
 import sys
-from numba import jit, njit
+#from numba import jit, njit
+#import numpy as np
 
 n, s = map(int, next(sys.stdin).strip().split())
 tuples = [tuple(map(int, next(sys.stdin).strip().split())) for _ in range(n)]
@@ -7,7 +8,6 @@ memoization = {}
 
 ## calc pd
 #@njit
-@jit(nopython=True, parallel=True, int32(int32, int32))
 def calc_lucro(n_aux, s_aux):
 	if (n_aux, s_aux) in memoization:
 		return memoization[(n_aux, s_aux)]

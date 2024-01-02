@@ -28,14 +28,5 @@ int main(){
     }
 
     cout << dp[W][n];
-    cout << "\ndp\n";
-
-    for (int i = 0; i <= W; i++){
-        for (int j = 0; j <= n; j++){
-            cout << dp[i][j] << " " ;
-        }
-        cout << endl;
-    }
-
 }
 

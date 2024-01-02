@@ -11,29 +11,18 @@ func knapsack(totalItems int, maxCapacity int, values []int, weights []int) int 
 		return 0
 	}
 
-	dpTable := make([][]int, totalItems+1)
-	for i := range dpTable {
-		dpTable[i] = make([]int, maxCapacity+1)
-	}
+	dp := make([]int, maxCapacity+1)
 
 	for item := 1; item <= totalItems; item++ {
-		for capacity := 1; capacity <= maxCapacity; capacity++ {
-			valueWithoutCurrent := dpTable[item-1][capacity]
-			currentWeight := weights[item-1]
+		currentWeight := weights[item-1]
+		currentValue := values[item-1]
 
-			if currentWeight <= capacity {
-				currentValue := values[item-1]
-				previousValue := dpTable[item-1][capacity-currentWeight]
-
-				valueWithCurrent := currentValue + previousValue
-				dpTable[item][capacity] = max(valueWithoutCurrent, valueWithCurrent)
-			} else {
-				dpTable[item][capacity] = valueWithoutCurrent
-			}
+		for capacity := maxCapacity; capacity >= currentWeight; capacity-- {
+			dp[capacity] = max(dp[capacity], dp[capacity-currentWeight] + currentValue)
 		}
 	}
 
-	return dpTable[totalItems][maxCapacity]
+	return dp[maxCapacity]
 }
 
 func main() {
@@ -62,4 +51,3 @@ func readInput(reader *bufio.Reader) (int, int, []int, []int) {
 
 	return n, W, v, w
 }
-

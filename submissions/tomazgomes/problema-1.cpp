@@ -14,7 +14,7 @@ int main(int argc, char * argv[])
   std::cin.tie(0);
 
   if (argc != 2) {
-    std::cout << "[ERRO]: Esse programa requer exatamente 1 argument - o caminho para o arquivo de entrada.\n";
+    std::cout << "[ERRO]: Esse programa requer exatamente 1 argumento - o caminho para o arquivo de entrada.\n";
     std::exit(1);
   }
 

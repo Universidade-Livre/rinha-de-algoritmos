@@ -10,9 +10,13 @@
 **🚀 Run problem**
 
 ```bash
-node problema-01
+node problema-01 ../../resources/instances/problem_01/exemplo_01.txt
+```
+
 or
-node problema-01 -S
+
+```bash
+node problema-01 ../../resources/instances/problem_01/exemplo_01.txt -s
 ```
 
 _Utilize -S para visualizar as sementes plantadas._
@@ -42,7 +46,10 @@ O desempenho do algoritmo pode depender de diversos fatores, incluindo o tamanho
 ## Resultado Template
 
 ```bash
-../exemplo_02.txt
-🌱 Sementes plantadas: 2, 3, 4, 6, 8, 9
-🟡 Valor máximo obtido: 407
+◽ Solução: 407
+
+or
+
+🌱 Sementes plantadas: [2, 3, 4, 6, 8, 9]
+◽ Solução: 407
 ```

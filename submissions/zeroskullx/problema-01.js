@@ -1,5 +1,6 @@
 const args = process.argv.slice(2);
-const arg = args[0];
+const arg0 = args[0];
+const arg1 = args[1];
 
 // ALGORITMO DE PROGRAMAÇÃO DINÂMICA PARA
 // RESOLVER O PROBLEMA DA PLANTAÇÃO DE SEMENTES
@@ -34,37 +35,33 @@ function maxCoins(seeds, W) {
 const fs = require("fs");
 
 function buildInventory(filename) {
+  if (!fs.existsSync(filename)) {
+    console.error(`Arquivo ${filename} não encontrado.`);
+    return;
+  }
+
   const content = fs.readFileSync(filename, "utf-8");
 
   const lines = content.trim().split("\n");
 
   const [totalSeeds, availableSpace] = lines[0].split(/\s+/).map(Number);
 
+  //Escolhas, pqn?! Mesmo diminuindo o desempenho,
+  //coloquei uma validação aqui.
   const seeds = lines.slice(1).map((line, index) => {
     const [spaceRequired, coins] = line.split(/\s+/).map(Number);
+    if (isNaN(spaceRequired) || isNaN(coins)) {
+      return null
+    }
+
     return { seed: `${index + 1}`, coins, spaceRequired };
-  });
+  }).filter(seed => seed !== null);
 
-  return { totalSeeds, availableSpace, seeds };
+  const results = maxCoins(seeds, availableSpace);
+
+  echoResult(results);
+  //return { totalSeeds, availableSpace, seeds };
 }
-
-const filename01 = "../../resources/instances/problem_01/exemplo_01.txt";
-const inventory01 = buildInventory(filename01);
-
-//DEBUG
-// console.log("Total de sementes na array:", result01.totalSeeds);
-// console.log("Total de espaços disponíveis:", result01.availableSpace);
-// console.log("Sementes:", result01.seeds);
-
-const result01 = maxCoins(inventory01.seeds, inventory01.availableSpace);
-
-const filename02 = "../../resources/instances/problem_01/exemplo_02.txt";
-const inventory02 = buildInventory(filename02);
-const result02 = maxCoins(inventory02.seeds, inventory02.availableSpace);
-
-const filename03 = "../../resources/instances/problem_01/exemplo_03.txt";
-const inventory03 = buildInventory(filename03);
-const result03 = maxCoins(inventory03.seeds, inventory03.availableSpace);
 
 //IMPRIMIR O RESULTADO
 // # Organizar as sementes em ordem crescente
@@ -83,19 +80,19 @@ const sortSeeds = (seeds) => {
   });
   return seeds;
 };
-// # Console log
-const echoResult = (filename, result) => {
+
+const echoResult = (result) => {
+
   const seedLabel =
     result.selectedSeeds.length > 1 ? "Sementes plantadas" : "Semente plantada";
 
-  console.log(filename);
-  if (arg?.toLowerCase() === "-s")
+
+  if (arg1?.toLowerCase() === "-s")
     console.log(
-      `🌱 ${seedLabel}: ${sortSeeds(result.selectedSeeds).join(", ")}.`
+      `🌱 ${seedLabel}: [${sortSeeds(result.selectedSeeds).join(", ")}].`
     );
-  console.log(`🟡 Valor máximo obtido: ${result.maxValue}`);
+  console.log(`◽ Solução: ${result.maxValue}`);
 };
 
-echoResult("../exemplo_01.txt", result01);
-echoResult("../exemplo_02.txt", result02);
-echoResult("../exemplo_03.txt", result03);
+//EXEC
+buildInventory(arg0);

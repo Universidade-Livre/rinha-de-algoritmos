@@ -1,7 +1,7 @@
 use std::{
     cmp, env,
     fs::File,
-    io::{self, BufRead}, time::Instant,
+    io::{self, BufRead},
 };
 
 fn knapsack(seeds: &Vec<(usize, usize)>, capacity: usize) -> usize {
@@ -25,7 +25,6 @@ fn knapsack(seeds: &Vec<(usize, usize)>, capacity: usize) -> usize {
 }
 
 fn main(){
-    let start_time = Instant::now();
     let args: Vec<String> = env::args().collect();
     if args.len() < 2 {
         eprintln!("Usage: {} <filename>", args[0]);
@@ -61,6 +60,4 @@ fn main(){
     let result = knapsack(&seeds, capacity);
     
     println!("Maior lucro possível: {}", result);
-    let elapsed_time = start_time.elapsed();
-    println!("{}", elapsed_time.as_micros());
 }

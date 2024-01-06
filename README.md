@@ -1,4 +1,4 @@
-![Learn4Elixir](./resources/img/header.png)
+![Rinha de Algoritmos](./resources/img/header.png)
 
 <p align="center">
   <a href="https://discord.gg/eXUBTY6HAu">
@@ -61,17 +61,23 @@ Vale ressaltar que quanto maior for o valor de $f(\mathbf{x})$, melhor será a p
 
 **Descrição:** Na busca por otimizar seus ganhos enquanto joga Stardew Valley, você analisa as opções de sementes disponíveis em determinado momento e registra a quantidade de espaços disponíveis para o plantio. 
 
-Por ser um fazendeiro organizado, você já tem conhecimento sobre a quantia de moedas que pode obter ao plantar cada tipo de semente durante um período específico, bem como a quantidade de espaços necessários para cada uma delas. Seu objetivo é, portanto, maximizar seu lucro ao plantar o maior número possível de sementes, levando em consideração a capacidade de plantio disponível, ao final do período escolhido.
+Por ser um fazendeiro organizado, você já tem conhecimento sobre a quantia de moedas que pode obter ao plantar cada tipo de semente durante um período específico, bem como a quantidade de espaços necessários para cada uma delas. Seu objetivo é, portanto, maximizar seu lucro ao plantar o maior número possível de sementes, levando em consideração a capacidade de plantio disponível, ao final do período escolhido. Para fins de simplicidade, assumiremos que todas as sementes possuem o mesmo tempo de plantio e maturação.
 
-Para esse problema, definiremos $C_{1} = 1$, $C_{2} = 0.2$, e uma pontuação bônus por cada instância resolvida de $C_{3} = 50$. Ainda, para fins de simplicidade, assumiremos que todas as sementes possuem o mesmo tempo de plantio e maturação.
+Para este problema, definiremos $C_{1} = 1$, $C_{2} = 0.2$, e uma pontuação bônus por cada instância resolvida de $C_{3} = 50$.
 
 Confira os detalhes em [como participar](how_to_participate.md#problema-01).
 
 ---
 
-### Problema 02: ???
+### Problema 02: Age of Empires - A Grande Fronteira
 
-**Descrição:** ???
+**Descrição:** Na vastidão estratégica do Age of Empires, o participante ousa enfrentar o desafio supremo denominado "A Grande Fronteira". Neste épico, os líderes imperiais, incluindo você, são convocados a traçar uma trama intrincada de postos avançados não apenas para expandir os domínios do império, mas para construir uma defesa intransponível contra os astutos adversários.
+
+Esses postos avançados, transcendendo meras construções, tornam-se os pilares cruciais na busca pela supremacia. A singularidade deste desafio coloca você na posição de escolher sabiamente os locais estratégicos, onde os postos avançados devem dominar as extremidades da fronteira, enquanto mantêm uma rede complexa que conecta todas as propriedades do império. O objetivo é criar uma teia que, ao expandir territorialmente, posiciona os postos avançados como sentinelas estratégicas, maximizando a muralha defensiva.
+
+A vitória não está apenas na quantidade de território conquistado, mas na maestria de suas escolhas, destacando-se em "A Grande Fronteira". Como líder imperial, ao assegurar a máxima presença defensiva e conectar todas as propriedades do vasto império, você gravará seu nome na história estratégica do Age of Empires. Que a sua sagacidade e estratégia iluminem o caminho para a supremacia!
+
+Para este problema problema, definiremos $C_{1} = 100$, $C_{2} = 25$, e uma pontuação bônus para cada instância resolvida de $C_{3} = 70$.
 
 ---
 

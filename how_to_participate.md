@@ -10,9 +10,10 @@ Começar a Rinha de Algoritmos é mamão com açúcar, é só:
 2. Crie uma ramificação (branch) no repositório clonado para a resolução do seu exercício com o comando `git checkout -b problema-1`.
 3. Na pasta [submissions](./submissions/) crie uma pasta com o seu nome de usuário. Ex: `mateusrovedaa/`
 4. Resolva o problema com base nas instruções informadas na seção [Instâncias](#instâncias) e salve o código em um arquivo com o nome `problema-1.ext`, onde `ext` é a extensão da linguagem de programação. Além disso, crie um arquivo `README.md` colocando instruções e detalhes da implementação que achar necessário. Preferencialmente, faça com que o seu código receba o arquivo das instâncias como argumentos no CLI.
-5. Adicione as alterações feitas para serem enviadas com o comando `git add .`
-6. Faça o commit enviando essas alterações `git commit -m "Submissão do problema 01"`.
-7. Abra um PR para a ramificação main.
+5. Ainda, para facilitar a avaliação por parte da organização, crie um ambiente Docker limitando os recursos para duas unidades de CPU e 2GB de RAM, conforme as restrições mencionadas no [README](README.md). 
+6. Adicione as alterações feitas para serem enviadas com o comando `git add .`
+7. Faça o commit enviando essas alterações `git commit -m "Submissão do problema 01"`.
+8. Abra um PR para a ramificação main.
 
 ## Instâncias
 
@@ -24,7 +25,7 @@ Nas seções abaixo, descreveremos a estrutura dos arquivos de texto que compõe
 
 ### Problema 01
 
-**Instâncias:**
+**Entrada:**
 
 Seja $n$ a quantidade de sementes, $v_{i}$ e $w_{i}$ o valor e a quantidade de espaços necesários para a semente $i$, e $W$ a quantidade de espaços disponíveis. O problema possui os seguintes limitantes. As instâncias estão organizadas da seguinte maneira.
 
@@ -60,6 +61,69 @@ Podemos ver facilmente que a solução ótima é dada pelo plantio de arroz apen
 ---
 
 ### Problema 02
+
+**Entrada:**
+- A primeira linha contém dois inteiros: o número de postos avançados $N$ ($2 \leq N \leq 120$) e o número de estradas $M$ ($1 \leq M \leq \frac{N \times (N-1)}{2}$).
+- As próximas $M$ linhas contêm dois inteiros cada: $u$ e $v$ ($1 \leq u, v \leq N$), indicando uma estrada conectando os postos avançados $u$ e $v$.
+
+**Saída:**
+- A saída deve conter um único inteiro $K$: o número total de postos avançados que definem a muralha
+
+**Objetivo:**
+- Maximizar o tamanho da muralha, definida como quantidade de pontos avançados nas extremidades do território, enquanto conecta todas as propriedades do império.
+
+**Exemplo de Entrada 01:**
+
+```plaintext
+8 7
+1 2
+2 3
+3 4
+4 5
+5 6
+6 7
+7 8
+```
+
+A entrada acima pode ser exibida como um grafo, conforme a figura abaixo.
+
+![Rinha de Algoritmos](./resources/img/graph1.png)
+
+**Exemplo de Saída 01:**
+```plaintext
+2
+```
+
+Neste exemplo, temos que basta utilizarmos todas as estradas disponíveis para traçar todos os postos avançados. Como as sentinelas sempre estarão nas fronteiras, a muralha de tamanho máximo possui tamanho $2$.
+
+Consideremos outro exemplo deste mesmo problema. Desta vez, suponha que há uma estrada entre os postos $5$ e $1$.
+
+**Exemplo de Entrada 02:**
+
+```plaintext
+8 8
+1 2
+2 3
+3 4
+4 5
+5 6
+5 1
+6 7
+7 8
+```
+
+A entrada acima pode ser exibida como um grafo, conforme a figura abaixo.
+
+![Rinha de Algoritmos](./resources/img/graph2.png)
+
+**Exemplo de Saída 02:**
+```plaintext
+3
+```
+
+Neste caso, podemos compor nossa muralha de modo que esta possua tamanho no máximo $3$, conforme podemos observar na figura abaixo.
+
+![Rinha de Algoritmos](./resources/img/graph3.png)
 
 ---
 

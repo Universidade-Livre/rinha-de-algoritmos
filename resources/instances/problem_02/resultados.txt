@@ -1,0 +1,3 @@
+exemplo_01.txt 15
+exemplo_02.txt 12
+exemplo_03.txt 27

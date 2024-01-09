@@ -1,4 +1,4 @@
-![Rinha de Algoritmos](./resources/img/header.png)
+![Rinha de Algoritmos](./resources/img/header_2024.png)
 
 <p align="center">
   <a href="https://discord.gg/eXUBTY6HAu">

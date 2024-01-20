@@ -1,0 +1,25 @@
+# Run handmade tests
+
+def run_handmade_tests():
+    file_paths = [
+        "submissions/gabrielng-rj99/Problema_1/Python/examples/exemplo_01.txt",             #  1194
+        "submissions/gabrielng-rj99/Problema_1/Python/examples/exemplo_02.txt",             #   407
+        "submissions/gabrielng-rj99/Problema_1/Python/examples/exemplo_03.txt",             #  1566
+        "submissions/gabrielng-rj99/Problema_1/Python/examples/longruntest.txt",            # 80762
+        "submissions/gabrielng-rj99/Problema_1/Python/examples/longruntest2.txt",           # 96601
+        "submissions/gabrielng-rj99/Problema_1/Python/examples/longruntest3.txt",           # 84067
+        "submissions/gabrielng-rj99/Problema_1/Python/examples/longruntest4.txt",           # 74789
+        "submissions/gabrielng-rj99/Problema_1/Python/examples/longruntest5.txt",           #102945
+        "submissions/gabrielng-rj99/Problema_1/Python/handmade_tests/test01_03.txt",        #  1581
+        "submissions/gabrielng-rj99/Problema_1/Python/handmade_tests/test02_03.txt",        #  1583
+        "submissions/gabrielng-rj99/Problema_1/Python/handmade_tests/test03_03.txt",        #  1596
+        "submissions/gabrielng-rj99/Problema_1/Python/handmade_tests/test03.1_03.txt",      #  1612
+        "submissions/gabrielng-rj99/Problema_1/Python/handmade_tests/test04_03.txt",        #  1597
+        "submissions/gabrielng-rj99/Problema_1/Python/handmade_tests/test05_03.txt",        #  1585
+    ]
+
+    for file in file_paths:
+        print(execute_algorithm(file))
+
+
+run_handmade_tests()

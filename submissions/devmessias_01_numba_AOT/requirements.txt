@@ -1,0 +1,4 @@
+Cython==3.0.8
+llvmlite==0.39.1
+numba==0.56
+numpy==1.22

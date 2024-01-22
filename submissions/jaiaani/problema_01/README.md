@@ -7,7 +7,7 @@ A Clojure library designed to ... well, that part is up to you.
 Para executar o programa siga os seguintes passos:
 
 Usando o docker...
- * Nesse mesmo diretório, rode o comando: `docker build problema1 .`
+ * Nesse mesmo diretório, rode o comando: `docker build -t problema1 .`
  * Depois rode o comando `docker run --rm -it problema1`
    * Como input há 3 opções: 
       - example1

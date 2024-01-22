@@ -1,0 +1,3 @@
+inputExample1.txt	1194
+inputExample2.txt	407
+inputExample3.txt	1566

@@ -1,6 +1,5 @@
 (ns plantation-profit.english-core
-  (:require [clojure.tools.cli :refer [parse-opts]]
-            [schema.core :as s])
+  (:require [schema.core :as s])
   (:use clojure.string)
   (:use clojure.java.io)
   (:gen-class))
@@ -55,19 +54,8 @@
         list-of-seeds (list-of-seeds (:seeds-informations input-elements))
         seeds-qty (first (:first-line input-elements))
         spaces-available (second (:first-line input-elements))]
-    (maximum-possible-profit seeds-qty list-of-seeds spaces-available)))
-
-(def cli-options
-  ;; An option with a required argument
-  [["-f" "--file FILE" "File Path"
-    :default "./resources/input/example1.txt"
-    :parse-fn #(str %)
-    :validate [#(ends-with? % ".txt") "Must be a .txt file"]]
-   ["-h" "--help"]])
-
-(defn- error-msg [errors]
-  (str "The following errors occurred while parsing your command:\n\n"
-       (join \newline errors)))
+    (println (str "The maximum possible profit is R$"
+                  (maximum-possible-profit seeds-qty list-of-seeds spaces-available) ",00"))))
 
 (defn- exit [status msg]
   (println msg)
@@ -75,11 +63,8 @@
 
 (defn -main
   [& args]
-  (let [arguments (parse-opts args cli-options)
-        options (:options arguments)
-        errors (:errors arguments)]
-    (cond
-      (:help options) (println (:summary arguments))
-      errors (exit 1 (error-msg errors))
-      :else (let [cli-return (str "Maximum possible profit isR$" (output (:file options)))]
-              (println cli-return)))))
+  (println "The options are example1, example2, example3, referring to the project examples")
+  (println "Enter the example you want to test here:")
+  (-> (read-line)
+      output)
+  (exit 1 "End"))

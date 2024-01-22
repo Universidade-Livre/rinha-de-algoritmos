@@ -1,6 +1,5 @@
 (ns plantation-profit.core
-  (:require [clojure.tools.cli :refer [parse-opts]]
-            [schema.core :as s])
+  (:require [schema.core :as s])
   (:use clojure.string)
   (:use clojure.java.io)
   (:gen-class))
@@ -10,8 +9,8 @@
    :w s/Int})
 
 (defn input
-  [txt-path]
-  (with-open [rdr (reader (str txt-path))]
+  [example]
+  (with-open [rdr (reader (str "./resources/input/" example ".txt"))]
     (doall (mapv vector (line-seq rdr)))))
 
 (s/defn linha-semente->vetor-semente :- [s/Int s/Int]
@@ -47,24 +46,16 @@
         (max (+ (:v semente) (maximo-lucro-possivel (dec quantidade-sementes) lista-de-sementes espacos-restantes))
              (maximo-lucro-possivel (dec quantidade-sementes) lista-de-sementes espacos-disponiveis))))))
 
-(defn output [filePath]
-  (let [input (input filePath)
+(defn output
+  [arquivoExemplo]
+  (let [input (input (str arquivoExemplo))
         elementos-do-input (elementos-do-input input)
         lista-de-sementes (lista-info-sementes (:vetor-info-sementes elementos-do-input))
         quantidade-de-sementes (first (:primeira-linha elementos-do-input))
         espacos-disponiveis (second (:primeira-linha elementos-do-input))]
-  (maximo-lucro-possivel quantidade-de-sementes lista-de-sementes espacos-disponiveis)))
-
-(def cli-options
-  [["-f" "--file FILE" "File Path"
-    :default "./resources/input/example1.txt"
-    :parse-fn #(str %)
-    :validate [#(ends-with? % ".txt") "O arquivo precisa ser .txt"]]
-   ["-h" "--help"]])
-
-(defn- error-msg [errors]
-  (str "Os seguintes erros ocorreram ao executar seu comando:\n\n"
-       (join \newline errors)))
+    (println (str "O maximo lucro possivel é de R$"
+                  (maximo-lucro-possivel quantidade-de-sementes lista-de-sementes espacos-disponiveis)
+                  ",00"))))
 
 (defn- exit [status msg]
   (println msg)
@@ -72,11 +63,8 @@
 
 (defn -main
   [& args]
-  (let [arguments (parse-opts args cli-options)
-        options (:options arguments)
-        errors (:errors arguments)]
-    (cond
-      (:help options) (println (:summary arguments))
-      errors (exit 1 (error-msg errors))
-      :else (let [cli-return (str "O máximo lucro possivel é de R$" (output (:file options)))]
-              (println cli-return)))))
+  (println "As opcoes sao example1, example2, example3, referentes aos exemplos do projeto")
+  (println "Insira aqui o exemplo que voce deseja testar:")
+  (-> (read-line)
+      output)
+  (exit 1 "End"))

@@ -3,8 +3,48 @@
 A Clojure library designed to ... well, that part is up to you.
 
 ## Usage
+🇧🇷
+Para executar o programa siga os seguintes passos:
 
-Eu vou adicionar um docker pra poder executar direitinho
+Usando o docker...
+ * Nesse mesmo diretório, rode o comando: `docker build problema1 .`
+ * Depois rode o comando `docker run --rm -it problema1`
+   * Como input há 3 opções: 
+      - example1
+      - example2
+      - example3 
+ 
+   são referentes aos exemplos dados, é somente uma concatenação para se referir
+      aos arquivos localizados na pasta ./resources/input,
+     ```clojure 
+     (defn input
+        [example]
+        (with-open [rdr (reader (str "./resources/input/" example ".txt"))]
+        (doall (mapv vector (line-seq rdr)))))```
+   
+  se for necessário testar outras entradas, é só adicionar o arquivo nessa pasta.
+
+English -
+
+To run the program, follow these steps:
+
+Using docker...
+* In that same directory, run the command: `docker build problema1 .`
+* Then run the command `docker run --rm -it problema1`
+    * As input there are 3 options:
+        - example1
+        - example2
+        - example3
+
+  refer to the examples given, it is just a concatenation to refer
+  to files located in the ./resources/input folder,
+    ```clojure 
+    (defn input
+       [example]
+       (with-open [rdr (reader (str "./resources/input/" example ".txt"))]
+       (doall (mapv vector (line-seq rdr)))))```
+
+If you need to test other entries, just add the file to this folder.
 
 ## License
 

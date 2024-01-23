@@ -1,0 +1,18 @@
+## Como Executar
+
+**Execução:**
+
+- Abra um terminal no diretório do script.
+- 
+- Execute o script para compilar o código java:
+     ```
+     javac problema1.java 
+     ```
+
+- Execute o script para rodar o código:
+    ```
+     java problema1  -file="../../resources/instances/problem_01/exemplo_01.txt"
+    ```
+
+obs: Não foi possível nomear o arquivo como problema-1 por conta do java.
+    

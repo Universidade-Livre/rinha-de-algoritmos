@@ -25,7 +25,7 @@ O executável será compilado na basta `bin`. Para executar com um arquivo `exem
 
 Primeiro, criamos a imagem no Docker:
 ```
-docker build -t problema-1
+docker build -t problema-1 .
 ```
 
 Para executar com um arquivo `exemplo.txt`, basta executar o comando:
